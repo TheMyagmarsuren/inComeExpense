@@ -4,6 +4,8 @@ import React from "react";
 import { BarChart } from "@/pages/components/BarChart";
 import { TotalExpenses } from "./components/TotalExpenses";
 import { DoughnutChart } from "@/pages/components/DoughnutChart";
+import LastRecords from "./components/LastRecords";
+import Records from "./components/Records";
 
 export default function Home() {
   return (
@@ -20,6 +22,9 @@ export default function Home() {
         <div>
           <DoughnutChart />
         </div>
+      </div>
+      <div>
+        <LastRecords />
       </div>
     </div>
   );
