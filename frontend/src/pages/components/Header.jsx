@@ -1,5 +1,4 @@
 import Vector from "./icons/Vector";
-import Image from "next/image";
 import Plus from "./icons/Plus";
 
 export const Header = () => {
@@ -9,9 +8,7 @@ export const Header = () => {
         <div className="p-[6.3px]">
           <Vector />
         </div>
-        <div>
-          <b>Dashboard</b>
-        </div>
+        <div className="text-black">Dashboard</div>
         <div>Records</div>
       </div>
       <div className="flex gap-6 items-center">

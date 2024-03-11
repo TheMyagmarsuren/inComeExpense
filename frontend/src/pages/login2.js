@@ -1,6 +1,6 @@
 import Vector from "./components/icons/Vector";
 import Geld from "./components/icons/Geld";
-export default function login() {
+export default function signup() {
   return (
     <div className="flex h-screen bg-white ">
       <div className="w-2/4 flex justify-center items-center">
@@ -14,10 +14,15 @@ export default function login() {
             </div>
           </div>
           <div className="flex gap-[2px] flex-col">
-            <div className="flex justify-center">Welcome back</div>
-            <div>Welcome back, Please enter your details</div>
+            <div className="flex justify-center">Create Geld account</div>
+            <div>Sign up below to create your Wallet account</div>
           </div>
           <div className="flex flex-col gap-4 w-full">
+            <input
+              type="text"
+              placeholder="name"
+              className="w-full h-12 p-4 rounded-lg bg-slate-100 border"
+            ></input>
             <input
               type="email"
               placeholder="Email"
@@ -28,13 +33,18 @@ export default function login() {
               placeholder="Password"
               className="h-12 p-4 rounded-lg  bg-slate-100 border"
             ></input>
+            <input
+              type="password"
+              placeholder="Re-Password"
+              className="h-12 p-4 rounded-lg  bg-slate-100 border"
+            ></input>
 
             <button className="bg-blue-600 flex justify-center items-center px-4 h-12 rounded-[20px] text-white">
               Log in
             </button>
           </div>
           <div className="flex">
-            <div className="">Don’t have account?</div>
+            <div className="">Already have account?</div>
             <div className="flex px-3 gap-px  items-center justify-center text-blue-500">
               Sign up
             </div>
