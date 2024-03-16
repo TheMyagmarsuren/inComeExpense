@@ -1,3 +1,4 @@
+"use client";
 import Plus from "./components/icons/Plus";
 import LeadingRightArrow from "./components/icons/LeadingRIghtArrow";
 import PlusBlue from "./components/icons/PlusBlue";
@@ -6,18 +7,22 @@ import Circle from "./components/icons/Circle";
 import TodayRecords from "./components/TodayRecords";
 import Category from "./components/Category";
 import Types from "./components/Types";
-
+import Modal from "./modals/Modal";
 export const records = () => {
   return (
     <div className="my-7 flex ml-[108px] mr-[120px] gap-9">
       <div className="flex flex-col border w-fit  rounded-xl p-6 bg-white gap-6">
         <div className="flex flex-col gap-6 text-white ">
           <div className="text-black">Records</div>
-          <div className="flex gap-px bg-blue-600 px-3 h-8 rounded-[20px] justify-center items-center">
+          <div
+            className="flex gap-px bg-blue-600 px-3 h-8 rounded-[20px] justify-center items-center "
+            onClick={() => document.getElementById("my_modal_5").showModal()}
+          >
             <div>
               <Plus />
             </div>
             <div>Add</div>
+            <Modal />
           </div>
         </div>
         <div>

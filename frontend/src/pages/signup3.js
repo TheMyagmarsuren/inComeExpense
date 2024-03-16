@@ -1,7 +1,9 @@
 import Vector from "./components/icons/Vector";
 import Geld from "./components/icons/Geld";
 import Coins from "./components/icons/Coins";
+import { useRouter } from "next/router";
 export default function singup3() {
+  const router = useRouter();
   return (
     <div className="h-screen w-screen flex items-center gap-[141px] flex-col pt-10">
       <div className="flex flex-col gap-12 w-60 justify-center items-center">
@@ -37,8 +39,14 @@ export default function singup3() {
             <div className="text-black  items-center flex justify-center">
               How much cash do you have in your wallet? one{" "}
             </div>
-            <div className="w-full bg-blue-600 flex justify-center items-center h-12 rounded-[20px] text-white px-4 ">
-              <button>Confirm</button>
+            <div
+              className="w-full bg-blue-600 flex justify-center items-center h-12 rounded-[20px] text-white px-4 "
+              onClick={(e) => {
+                e.preventDefault();
+                router.push("/signup4");
+              }}
+            >
+              <button type="button">Confirm</button>
             </div>
           </div>
         </div>

@@ -5,7 +5,6 @@ import { BarChart } from "@/pages/components/BarChart";
 import { TotalExpenses } from "./components/TotalExpenses";
 import { DoughnutChart } from "@/pages/components/DoughnutChart";
 import LastRecords from "./components/LastRecords";
-
 export default function Home() {
   return (
     <div className="px-[120px] mt-[32px]">

@@ -1,6 +1,9 @@
 import Vector from "./components/icons/Vector";
 import Geld from "./components/icons/Geld";
+import { useRouter } from "next/router";
 export default function signup() {
+  const router = useRouter();
+  const users = [];
   return (
     <div className="flex h-screen bg-white ">
       <div className="w-2/4 flex justify-center items-center">
@@ -39,14 +42,20 @@ export default function signup() {
               className="h-12 p-4 rounded-lg  bg-slate-100 border"
             ></input>
 
-            <button className="bg-blue-600 flex justify-center items-center px-4 h-12 rounded-[20px] text-white">
-              Log in
+            <button
+              className="bg-blue-600 flex justify-center items-center px-4 h-12 rounded-[20px] text-white"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push("/signup2");
+              }}
+            >
+              Sign up
             </button>
           </div>
           <div className="flex">
             <div className="">Already have account?</div>
             <div className="flex px-3 gap-px  items-center justify-center text-blue-500">
-              Sign up
+              Log in
             </div>
           </div>
         </div>
