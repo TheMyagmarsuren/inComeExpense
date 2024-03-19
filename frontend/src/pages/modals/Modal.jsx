@@ -1,5 +1,10 @@
 import Wrong from "../components/icons/Wrong";
+import { useState } from "react";
 export default function Modal() {
+  const [color, setColor] = useState("");
+
+  let value = color;
+  let c = "";
   return (
     <div>
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
@@ -19,10 +24,24 @@ export default function Modal() {
               <div className="flex gap-5 flex-col px-6 pt-5 pb-6 ">
                 <div>
                   <div className="flex gap-1 bg-slate-200 rounded-[100px]">
-                    <button className="h-10 rounded-[20px] bg-blue-500 px-3 w-full">
+                    <button
+                      className={`h-10 rounded-[20px] bg-${
+                        value == "blue" ? "blue" : "gray"
+                      }-500 px-3 w-full`}
+                      onClick={() => {
+                        setColor((c = "blue"));
+                      }}
+                    >
                       Expense
                     </button>
-                    <button className="h-10 rounded-[20px] px-3 w-full">
+                    <button
+                      className={`h-10 rounded-[20px] px-3 w-full bg-${
+                        value == "green" ? "green" : "gray"
+                      }-500 `}
+                      onClick={() => {
+                        setColor((c = "green"));
+                      }}
+                    >
                       Income
                     </button>
                   </div>
@@ -59,8 +78,9 @@ export default function Modal() {
                     </div>
                   </div>
                 </div>
-
-                <div className="bg-blue-600 px-3 h-12 flex justify-center items-center text-white rounded-[20px]">
+                <div
+                  className={`bg-${value}-500 px-3 h-12 flex justify-center items-center text-white rounded-[20px]`}
+                >
                   Add Record
                 </div>
               </div>

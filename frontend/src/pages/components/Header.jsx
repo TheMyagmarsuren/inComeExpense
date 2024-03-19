@@ -6,10 +6,10 @@ import { useRouter } from "next/router";
 export const Header = () => {
   const router = useRouter();
   const styleDashboard = {
-    color: router.asPath === "/" ? "black" : "",
+    color: router.asPath === "/" ? "black" : "grey",
   };
   const styleRecords = {
-    color: router.asPath === "/records" ? "black" : "",
+    color: router.asPath === "/records" ? "black" : "grey",
   };
   return (
     <div className="flex w-full items-center justify-between px-[120px] py-5 bg-white">
