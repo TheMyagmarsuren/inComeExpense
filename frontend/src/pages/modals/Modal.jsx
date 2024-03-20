@@ -2,9 +2,8 @@ import Wrong from "../components/icons/Wrong";
 import { useState } from "react";
 export default function Modal() {
   const [color, setColor] = useState("");
+  let expense = color;
 
-  let value = color;
-  let c = "";
   return (
     <div>
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
@@ -23,23 +22,27 @@ export default function Modal() {
             <div className="flex">
               <div className="flex gap-5 flex-col px-6 pt-5 pb-6 ">
                 <div>
-                  <div className="flex gap-1 bg-slate-200 rounded-[100px]">
+                  <div className={`flex gap-1 bg-slate-200 rounded-[100px]`}>
                     <button
-                      className={`h-10 rounded-[20px] bg-${
-                        value == "blue" ? "blue" : "gray"
-                      }-500 px-3 w-full`}
+                      className={`text-${
+                        expense ? "black" : "white"
+                      } h-10 rounded-[20px] px-3 w-full  bg-${
+                        expense ? "gray" : "blue"
+                      }-500`}
                       onClick={() => {
-                        setColor((c = "blue"));
+                        setColor((expense = false));
                       }}
                     >
                       Expense
                     </button>
                     <button
-                      className={`h-10 rounded-[20px] px-3 w-full bg-${
-                        value == "green" ? "green" : "gray"
-                      }-500 `}
+                      className={`text-${
+                        expense ? "white" : "black"
+                      } h-10 rounded-[20px] px-3 w-full bg-${
+                        expense ? "green" : "gray"
+                      }-500`}
                       onClick={() => {
-                        setColor((c = "green"));
+                        setColor((expense = true));
                       }}
                     >
                       Income
@@ -56,11 +59,7 @@ export default function Modal() {
                       </div>
                     </div>
                     <div>
-                      <select className="select select-bordered w-full bg-slate-200">
-                        <option disabled selected>
-                          Choose
-                        </option>
-                      </select>
+                      <select className="select w-full bg-slate-200"></select>
                     </div>
                     <div className="flex gap-3">
                       <div>
@@ -79,7 +78,9 @@ export default function Modal() {
                   </div>
                 </div>
                 <div
-                  className={`bg-${value}-500 px-3 h-12 flex justify-center items-center text-white rounded-[20px]`}
+                  className={`bg-${
+                    expense ? "green" : "blue"
+                  }-500 px-3 h-12 flex justify-center items-center text-white rounded-[20px]`}
                 >
                   Add Record
                 </div>
