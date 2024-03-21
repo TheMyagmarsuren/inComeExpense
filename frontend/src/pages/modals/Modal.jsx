@@ -1,5 +1,9 @@
+import DownArrow from "../components/icons/DownArrow";
 import Wrong from "../components/icons/Wrong";
 import { useState } from "react";
+import { AiFillCaretDown } from "react-icons/ai";
+import ChooseModal from "./ChooseModal";
+
 export default function Modal() {
   const [color, setColor] = useState("");
   let expense = color;
@@ -58,9 +62,19 @@ export default function Modal() {
                         <div>000.00</div>
                       </div>
                     </div>
-                    <div>
-                      <select className="select w-full bg-slate-200"></select>
+                    <div
+                      className="bg-slate-200 rounded-xl p-3 flex justify-between items-center "
+                      onClick={() =>
+                        document.getElementById("my_modal_2").showModal()
+                      }
+                    >
+                      <button>Choose</button>
+                      <div>
+                        <AiFillCaretDown />
+                        <ChooseModal />
+                      </div>
                     </div>
+
                     <div className="flex gap-3">
                       <div>
                         <input
