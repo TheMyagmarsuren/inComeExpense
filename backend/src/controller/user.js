@@ -4,7 +4,7 @@ export const getAllUsers = async (req, res) => {
   try {
     const data = await sql`SELECT * FROM users`;
     console.log(data);
-    res.send(`id = ${uuidv4()}`);
+    res.send(data);
     return data;
   } catch (err) {
     console.log(err);

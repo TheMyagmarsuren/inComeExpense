@@ -1,7 +1,7 @@
 import express from "express";
 import { sql } from "./config/database.js";
 import { user } from "./src/router/user.js";
-import { v4 as uuidv4 } from "uuid";
+
 const app = express();
 const port = 3001;
 

@@ -1,9 +1,9 @@
 import Vector from "./components/icons/Vector";
 import Geld from "./components/icons/Geld";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 export default function login() {
   const router = useRouter();
-
   return (
     <div className="flex h-screen bg-white ">
       <div className="w-2/4 flex justify-center items-center">
