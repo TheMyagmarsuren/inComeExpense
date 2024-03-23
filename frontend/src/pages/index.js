@@ -1,9 +1,9 @@
-import Noise from "@/pages/components/Noise";
+import Noise from "./components/Noise";
 import YourIncome from "./components/YourIncome";
 import React from "react";
-import { BarChart } from "@/pages/components/BarChart";
+import { BarChart } from "./components/BarChart";
 import { TotalExpenses } from "./components/TotalExpenses";
-import { DoughnutChart } from "@/pages/components/DoughnutChart";
+import { DoughnutChart } from "./components/DoughnutChart";
 import LastRecords from "./components/LastRecords";
 import Header from "./components/Header";
 export default function Home() {
