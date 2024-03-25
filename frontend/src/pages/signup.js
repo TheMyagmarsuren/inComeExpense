@@ -1,33 +1,12 @@
 import Vector from "./components/icons/Vector";
 import Geld from "./components/icons/Geld";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { ContextData } from "./context/Context";
+import { useContext, useEffect, useState } from "react";
+
 export default function signup() {
+  const { data, setData, createUser } = useContext(ContextData);
   const router = useRouter();
-  const [data, setData] = useState({
-    name: "test2",
-    email: "test2@gmail.com",
-    password: "122343",
-    rePassword: "12323",
-  });
-  const createUser = async () => {
-    try {
-      const option = {
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify(data),
-      };
-      const user = await fetch("http://localhost:3001/users", option);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    createUser();
-  }, [data]);
 
   return (
     <div className="flex h-screen bg-white ">
@@ -87,7 +66,7 @@ export default function signup() {
               className="bg-blue-600 flex justify-center items-center px-4 h-12 rounded-[20px] text-white"
               onClick={(e) => {
                 e.preventDefault();
-                router.push("/signup2");
+                router.push("/currency");
               }}
             >
               Sign up

@@ -2,7 +2,7 @@ import Vector from "./components/icons/Vector";
 import Geld from "./components/icons/Geld";
 import Check from "./components/icons/Check";
 import { useRouter } from "next/router";
-export default function singup3() {
+export default function finish() {
   const router = useRouter();
   return (
     <div className="h-screen w-screen flex items-center gap-[141px] flex-col pt-10">

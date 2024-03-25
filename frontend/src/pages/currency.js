@@ -2,7 +2,9 @@ import Vector from "./components/icons/Vector";
 import Geld from "./components/icons/Geld";
 import Money from "./components/icons/Money";
 import { useRouter } from "next/router";
-export default function singup2() {
+import { ContextData } from "./context/Context";
+export default function currency() {
+  // const [currency, setCurrency] = useState();
   const router = useRouter();
   return (
     <div className="h-screen flex items-center gap-[141px] flex-col pt-10">
@@ -47,7 +49,7 @@ export default function singup2() {
               className="w-full bg-blue-600 flex justify-center items-center h-12 rounded-[20px] text-white px-4 "
               onClick={(e) => {
                 e.preventDefault();
-                router.push("/signup3");
+                router.push("/balance");
               }}
             >
               <button type="button">Confirm</button>

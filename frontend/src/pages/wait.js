@@ -1,6 +1,6 @@
 import Vector from "./components/icons/Vector";
 import Geld from "./components/icons/Geld";
-export default function signup() {
+export default function wait() {
   return (
     <div className="flex flex-col justify-center items-center h-screen gap-12">
       <div className="flex gap-[17.64px] items-center p-[10.08px]">

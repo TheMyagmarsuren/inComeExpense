@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
-
+import ContextProvider from "./context/Context";
 export default function App({ Component, pageProps }) {
   return (
-    <div>
-      <Component {...pageProps} />
-    </div>
+    <ContextProvider>
+      <Component {...pageProps} />;
+    </ContextProvider>
   );
 }
