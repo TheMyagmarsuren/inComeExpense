@@ -66,6 +66,7 @@ export default function signup() {
               className="bg-blue-600 flex justify-center items-center px-4 h-12 rounded-[20px] text-white"
               onClick={(e) => {
                 e.preventDefault();
+                createUser();
                 router.push("/currency");
               }}
             >
